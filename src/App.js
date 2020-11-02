@@ -12,8 +12,9 @@ import {
 function App() {
 
   const [articles, setArticles] = useState([])
-  
-  const API_URL = "/v2/everything?q=bitcoin&from=2020-09-27&sortBy=publishedAt&apiKey=bc71c5485ea9448fbde21f078407d12d"
+
+  // const API_URL = "/v2/everything?q=bitcoin&from=2020-09-27&sortBy=publishedAt&apiKey=f94f33d466c2452a810861ce766667d4"
+  const API_URL = "/v2/everything?q=bitcoin&sortBy=publishedAt&apiKey=f94f33d466c2452a810861ce766667d4"
 
   useEffect(() => {
     getArticles()
@@ -28,8 +29,8 @@ function App() {
       }).catch(err => alert(err.message)) 
   } 
 
-
   return (
+
     <Router>
     <div className="app-container">
       <Switch>
@@ -44,6 +45,7 @@ function App() {
   </Router>
 
   );
+
 }
 
 export default App;

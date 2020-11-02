@@ -1,9 +1,8 @@
 import './Articles.css';
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import {
   Link
 } from "react-router-dom";
-
 
 function Articles(props) {
 
@@ -23,7 +22,7 @@ function Articles(props) {
                 <div className="article-author">
                   {article.author} - {article.publishedAt}
                 </div>
-                <p><img src={article.urlToImage}/></p>
+                <p><img src={article.urlToImage} alt={article.title}/></p>
                 <p>{article.description}</p> 
               </div>)
             }
